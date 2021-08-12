@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+@keyframes appearance {
+  0%   {opacity: 0;}
+  50%  {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
+@media only screen and (max-width: 600px){ 
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #new-quote {
+      margin-top: 10px;
+      opacity: 1;
+      cursor: pointer;
+    }
+    #new-quote:hover {
+      opacity: 0.9;
+    }
+    
+    #tweet-quote {
+      // width: 100px;
+      padding: 0 30px;
+    }
+  }
+}
+
+.App {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
+  animation-name: appearance;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+    #quote-box {
+      display: flex;
+      flex-direction: column;
+    
+      max-width: 552px;
+      height: fit-content;
+    
+      background-color: #fff;
+      border-radius: 4px;
+
+      #text {
+        margin: 45px 45px 28px;
+        font-size: 29px;
+        font-weight: 500;
+        line-height: 34px;
+      }
+
+      #author {
+        align-self: flex-end;
+        margin-right: 45px;
+
+        font-size: 16px;
+        font-weight:100;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 32px 45px;
+
+        #new-quote {
+          width: 100px;
+          height: 40px;
+          color: #fff;
+          border: none;
+          border-radius: 2px;
+        }
+        
+        #tweet-quote {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          text-decoration: none;
+          color: #fff;
+          border-radius: 2px;
+        }
+
+      }
+
+    }
+}
+
+.App.animated {
+  animation-name: appearance;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+
+
+
